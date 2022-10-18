@@ -1,0 +1,1075 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5F91C66B
+P 1300 1300
+F 0 "J1" H 1408 1481 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 1408 1390 50  0000 C CNN
+F 2 "" H 1300 1300 50  0001 C CNN
+F 3 "~" H 1300 1300 50  0001 C CNN
+	1    1300 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 5F96D23E
+P 1450 2800
+F 0 "J2" H 1558 3081 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 1558 2990 50  0000 C CNN
+F 2 "" H 1450 2800 50  0001 C CNN
+F 3 "~" H 1450 2800 50  0001 C CNN
+	1    1450 2800
+	1    0    0    -1  
+$EndComp
+Text Notes 950  850  0    50   ~ 0
+Water temperature sensor
+Text Notes 950  2350 0    50   ~ 0
+Humidity and air temperature
+$Comp
+L MySymbols:MELIFE_ESP-32S U2
+U 1 1 5F9C58BB
+P 4400 2000
+F 0 "U2" H 4400 3065 50  0000 C CNN
+F 1 "MELIFE_ESP-32S" H 4400 2974 50  0000 C CNN
+F 2 "MODULE" H 4400 1050 50  0001 C CNN
+F 3 "DOCUMENTATION" H 4300 2000 50  0001 C CNN
+	1    4400 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:DMG3402L Q6
+U 1 1 5F9C7ECF
+P 10000 1500
+F 0 "Q6" H 10204 1546 50  0000 L CNN
+F 1 "DMG3402L" H 10204 1455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10200 1425 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/DMG3402L.pdf" H 10000 1500 50  0001 L CNN
+	1    10000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J10
+U 1 1 5F9CBCB7
+P 10600 1200
+F 0 "J10" H 10708 1381 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 10708 1290 50  0000 C CNN
+F 2 "" H 10600 1200 50  0001 C CNN
+F 3 "~" H 10600 1200 50  0001 C CNN
+	1    10600 1200
+	-1   0    0    1   
+$EndComp
+Text Notes 9000 800  0    50   ~ 0
+Air Heater
+Wire Wire Line
+	10100 1300 10100 1200
+$Comp
+L power:GND #PWR0101
+U 1 1 5F9EDC00
+P 10100 1700
+F 0 "#PWR0101" H 10100 1450 50  0001 C CNN
+F 1 "GND" H 10105 1527 50  0000 C CNN
+F 2 "" H 10100 1700 50  0001 C CNN
+F 3 "" H 10100 1700 50  0001 C CNN
+	1    10100 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 1100 10400 1100
+$Comp
+L power:+24V #PWR0102
+U 1 1 5F9E7DF0
+P 10100 1100
+F 0 "#PWR0102" H 10100 950 50  0001 C CNN
+F 1 "+24V" H 10115 1273 50  0000 C CNN
+F 2 "" H 10100 1100 50  0001 C CNN
+F 3 "" H 10100 1100 50  0001 C CNN
+	1    10100 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 1200 10400 1200
+Text GLabel 9700 1500 0    50   Input ~ 0
+AirHeatCtl
+Wire Wire Line
+	9700 1500 9800 1500
+Wire Notes Line
+	9000 800  9000 2000
+Wire Notes Line
+	9000 2000 11000 2000
+Wire Notes Line
+	11000 2000 11000 800 
+Wire Notes Line
+	11000 800  9000 800 
+$Comp
+L Transistor_FET:DMG3402L Q2
+U 1 1 5FA0A772
+P 7900 1500
+F 0 "Q2" H 8104 1546 50  0000 L CNN
+F 1 "DMG3402L" H 8104 1455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8100 1425 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/DMG3402L.pdf" H 7900 1500 50  0001 L CNN
+	1    7900 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J6
+U 1 1 5FA0A778
+P 8500 1200
+F 0 "J6" H 8608 1381 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 8608 1290 50  0000 C CNN
+F 2 "" H 8500 1200 50  0001 C CNN
+F 3 "~" H 8500 1200 50  0001 C CNN
+	1    8500 1200
+	-1   0    0    1   
+$EndComp
+Text Notes 6900 800  0    50   ~ 0
+Water Heater
+Wire Wire Line
+	8000 1300 8000 1200
+$Comp
+L power:GND #PWR0103
+U 1 1 5FA0A780
+P 8000 1700
+F 0 "#PWR0103" H 8000 1450 50  0001 C CNN
+F 1 "GND" H 8005 1527 50  0000 C CNN
+F 2 "" H 8000 1700 50  0001 C CNN
+F 3 "" H 8000 1700 50  0001 C CNN
+	1    8000 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1100 8300 1100
+$Comp
+L power:+24V #PWR0104
+U 1 1 5FA0A787
+P 8000 1100
+F 0 "#PWR0104" H 8000 950 50  0001 C CNN
+F 1 "+24V" H 8015 1273 50  0000 C CNN
+F 2 "" H 8000 1100 50  0001 C CNN
+F 3 "" H 8000 1100 50  0001 C CNN
+	1    8000 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1200 8300 1200
+Text GLabel 7600 1500 0    50   Input ~ 0
+WaterHeatCtl
+Wire Wire Line
+	7600 1500 7700 1500
+Wire Notes Line
+	6900 800  6900 2000
+Wire Notes Line
+	6900 2000 8900 2000
+Wire Notes Line
+	8900 2000 8900 800 
+Wire Notes Line
+	8900 800  6900 800 
+$Comp
+L Transistor_FET:DMG3402L Q3
+U 1 1 5FA0E2EA
+P 7900 2900
+F 0 "Q3" H 8104 2946 50  0000 L CNN
+F 1 "DMG3402L" H 8104 2855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8100 2825 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/DMG3402L.pdf" H 7900 2900 50  0001 L CNN
+	1    7900 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J7
+U 1 1 5FA0E2F0
+P 8500 2600
+F 0 "J7" H 8608 2781 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 8608 2690 50  0000 C CNN
+F 2 "" H 8500 2600 50  0001 C CNN
+F 3 "~" H 8500 2600 50  0001 C CNN
+	1    8500 2600
+	-1   0    0    1   
+$EndComp
+Text Notes 6900 2200 0    50   ~ 0
+Ventilation
+Wire Wire Line
+	8000 2700 8000 2600
+$Comp
+L power:GND #PWR0105
+U 1 1 5FA0E2F8
+P 8000 3100
+F 0 "#PWR0105" H 8000 2850 50  0001 C CNN
+F 1 "GND" H 8005 2927 50  0000 C CNN
+F 2 "" H 8000 3100 50  0001 C CNN
+F 3 "" H 8000 3100 50  0001 C CNN
+	1    8000 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 2500 8300 2500
+$Comp
+L power:+24V #PWR0106
+U 1 1 5FA0E2FF
+P 8000 2500
+F 0 "#PWR0106" H 8000 2350 50  0001 C CNN
+F 1 "+24V" H 8015 2673 50  0000 C CNN
+F 2 "" H 8000 2500 50  0001 C CNN
+F 3 "" H 8000 2500 50  0001 C CNN
+	1    8000 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 2600 8300 2600
+Text GLabel 7600 2900 0    50   Input ~ 0
+VentilationCtl
+Wire Wire Line
+	7600 2900 7700 2900
+Wire Notes Line
+	6900 2200 6900 3400
+Wire Notes Line
+	6900 3400 8900 3400
+Wire Notes Line
+	8900 3400 8900 2200
+Wire Notes Line
+	8900 2200 6900 2200
+$Comp
+L Transistor_FET:DMG3402L Q7
+U 1 1 5FA108F3
+P 10000 2900
+F 0 "Q7" H 10204 2946 50  0000 L CNN
+F 1 "DMG3402L" H 10204 2855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10200 2825 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/DMG3402L.pdf" H 10000 2900 50  0001 L CNN
+	1    10000 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J11
+U 1 1 5FA108F9
+P 10600 2600
+F 0 "J11" H 10708 2781 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 10708 2690 50  0000 C CNN
+F 2 "" H 10600 2600 50  0001 C CNN
+F 3 "~" H 10600 2600 50  0001 C CNN
+	1    10600 2600
+	-1   0    0    1   
+$EndComp
+Text Notes 9000 2200 0    50   ~ 0
+Irrigation
+Wire Wire Line
+	10100 2700 10100 2600
+$Comp
+L power:GND #PWR0107
+U 1 1 5FA10901
+P 10100 3100
+F 0 "#PWR0107" H 10100 2850 50  0001 C CNN
+F 1 "GND" H 10105 2927 50  0000 C CNN
+F 2 "" H 10100 3100 50  0001 C CNN
+F 3 "" H 10100 3100 50  0001 C CNN
+	1    10100 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 2500 10400 2500
+$Comp
+L power:+24V #PWR0108
+U 1 1 5FA10908
+P 10100 2500
+F 0 "#PWR0108" H 10100 2350 50  0001 C CNN
+F 1 "+24V" H 10115 2673 50  0000 C CNN
+F 2 "" H 10100 2500 50  0001 C CNN
+F 3 "" H 10100 2500 50  0001 C CNN
+	1    10100 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 2600 10400 2600
+Text GLabel 9700 2900 0    50   Input ~ 0
+IrrigationCtl
+Wire Wire Line
+	9700 2900 9800 2900
+Wire Notes Line
+	9000 2200 9000 3400
+Wire Notes Line
+	9000 3400 11000 3400
+Wire Notes Line
+	11000 3400 11000 2200
+Wire Notes Line
+	11000 2200 9000 2200
+$Comp
+L Transistor_FET:DMG3402L Q4
+U 1 1 5FA13CF9
+P 7900 4300
+F 0 "Q4" H 8104 4346 50  0000 L CNN
+F 1 "DMG3402L" H 8104 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8100 4225 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/DMG3402L.pdf" H 7900 4300 50  0001 L CNN
+	1    7900 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J8
+U 1 1 5FA13CFF
+P 8500 4000
+F 0 "J8" H 8608 4181 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 8608 4090 50  0000 C CNN
+F 2 "" H 8500 4000 50  0001 C CNN
+F 3 "~" H 8500 4000 50  0001 C CNN
+	1    8500 4000
+	-1   0    0    1   
+$EndComp
+Text Notes 6900 3600 0    50   ~ 0
+Aeration
+Wire Wire Line
+	8000 4100 8000 4000
+$Comp
+L power:GND #PWR0109
+U 1 1 5FA13D07
+P 8000 4500
+F 0 "#PWR0109" H 8000 4250 50  0001 C CNN
+F 1 "GND" H 8005 4327 50  0000 C CNN
+F 2 "" H 8000 4500 50  0001 C CNN
+F 3 "" H 8000 4500 50  0001 C CNN
+	1    8000 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 3900 8300 3900
+$Comp
+L power:+24V #PWR0110
+U 1 1 5FA13D0E
+P 8000 3900
+F 0 "#PWR0110" H 8000 3750 50  0001 C CNN
+F 1 "+24V" H 8015 4073 50  0000 C CNN
+F 2 "" H 8000 3900 50  0001 C CNN
+F 3 "" H 8000 3900 50  0001 C CNN
+	1    8000 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4000 8300 4000
+Text GLabel 7600 4300 0    50   Input ~ 0
+AerationCtl
+Wire Wire Line
+	7600 4300 7700 4300
+Wire Notes Line
+	6900 3600 6900 4800
+Wire Notes Line
+	6900 4800 8900 4800
+Wire Notes Line
+	8900 4800 8900 3600
+Wire Notes Line
+	8900 3600 6900 3600
+$Comp
+L Transistor_FET:DMG3402L Q8
+U 1 1 5FA1557F
+P 10000 4300
+F 0 "Q8" H 10204 4346 50  0000 L CNN
+F 1 "DMG3402L" H 10204 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10200 4225 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/DMG3402L.pdf" H 10000 4300 50  0001 L CNN
+	1    10000 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J12
+U 1 1 5FA15585
+P 10600 4000
+F 0 "J12" H 10708 4181 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 10708 4090 50  0000 C CNN
+F 2 "" H 10600 4000 50  0001 C CNN
+F 3 "~" H 10600 4000 50  0001 C CNN
+	1    10600 4000
+	-1   0    0    1   
+$EndComp
+Text Notes 9000 3600 0    50   ~ 0
+Lights
+Wire Wire Line
+	10100 4100 10100 4000
+$Comp
+L power:GND #PWR0111
+U 1 1 5FA1558D
+P 10100 4500
+F 0 "#PWR0111" H 10100 4250 50  0001 C CNN
+F 1 "GND" H 10105 4327 50  0000 C CNN
+F 2 "" H 10100 4500 50  0001 C CNN
+F 3 "" H 10100 4500 50  0001 C CNN
+	1    10100 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 3900 10400 3900
+$Comp
+L power:+24V #PWR0112
+U 1 1 5FA15594
+P 10100 3900
+F 0 "#PWR0112" H 10100 3750 50  0001 C CNN
+F 1 "+24V" H 10115 4073 50  0000 C CNN
+F 2 "" H 10100 3900 50  0001 C CNN
+F 3 "" H 10100 3900 50  0001 C CNN
+	1    10100 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 4000 10400 4000
+Text GLabel 9700 4300 0    50   Input ~ 0
+LightCtl
+Wire Wire Line
+	9700 4300 9800 4300
+Wire Notes Line
+	9000 3600 9000 4800
+Wire Notes Line
+	9000 4800 11000 4800
+Wire Notes Line
+	11000 4800 11000 3600
+Wire Notes Line
+	11000 3600 9000 3600
+$Comp
+L Transistor_FET:DMG3402L Q5
+U 1 1 5FA18FB7
+P 7900 5700
+F 0 "Q5" H 8104 5746 50  0000 L CNN
+F 1 "DMG3402L" H 8104 5655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8100 5625 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/DMG3402L.pdf" H 7900 5700 50  0001 L CNN
+	1    7900 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J9
+U 1 1 5FA18FBD
+P 8500 5400
+F 0 "J9" H 8608 5581 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 8608 5490 50  0000 C CNN
+F 2 "" H 8500 5400 50  0001 C CNN
+F 3 "~" H 8500 5400 50  0001 C CNN
+	1    8500 5400
+	-1   0    0    1   
+$EndComp
+Text Notes 6900 5000 0    50   ~ 0
+IR
+Wire Wire Line
+	8000 5500 8000 5400
+$Comp
+L power:GND #PWR0113
+U 1 1 5FA18FC5
+P 8000 5900
+F 0 "#PWR0113" H 8000 5650 50  0001 C CNN
+F 1 "GND" H 8005 5727 50  0000 C CNN
+F 2 "" H 8000 5900 50  0001 C CNN
+F 3 "" H 8000 5900 50  0001 C CNN
+	1    8000 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5300 8300 5300
+$Comp
+L power:+24V #PWR0114
+U 1 1 5FA18FCC
+P 8000 5300
+F 0 "#PWR0114" H 8000 5150 50  0001 C CNN
+F 1 "+24V" H 8015 5473 50  0000 C CNN
+F 2 "" H 8000 5300 50  0001 C CNN
+F 3 "" H 8000 5300 50  0001 C CNN
+	1    8000 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5400 8300 5400
+Text GLabel 7600 5700 0    50   Input ~ 0
+IRCtl
+Wire Wire Line
+	7600 5700 7700 5700
+Wire Notes Line
+	6900 5000 6900 6200
+Wire Notes Line
+	6900 6200 8900 6200
+Wire Notes Line
+	8900 6200 8900 5000
+Wire Notes Line
+	8900 5000 6900 5000
+$Comp
+L Transistor_FET:DMG3402L Q9
+U 1 1 5FA1A038
+P 10000 5700
+F 0 "Q9" H 10204 5746 50  0000 L CNN
+F 1 "DMG3402L" H 10204 5655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10200 5625 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/DMG3402L.pdf" H 10000 5700 50  0001 L CNN
+	1    10000 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J13
+U 1 1 5FA1A03E
+P 10600 5400
+F 0 "J13" H 10708 5581 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 10708 5490 50  0000 C CNN
+F 2 "" H 10600 5400 50  0001 C CNN
+F 3 "~" H 10600 5400 50  0001 C CNN
+	1    10600 5400
+	-1   0    0    1   
+$EndComp
+Text Notes 9000 5000 0    50   ~ 0
+UV
+Wire Wire Line
+	10100 5500 10100 5400
+$Comp
+L power:GND #PWR0115
+U 1 1 5FA1A046
+P 10100 5900
+F 0 "#PWR0115" H 10100 5650 50  0001 C CNN
+F 1 "GND" H 10105 5727 50  0000 C CNN
+F 2 "" H 10100 5900 50  0001 C CNN
+F 3 "" H 10100 5900 50  0001 C CNN
+	1    10100 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 5300 10400 5300
+$Comp
+L power:+24V #PWR0116
+U 1 1 5FA1A04D
+P 10100 5300
+F 0 "#PWR0116" H 10100 5150 50  0001 C CNN
+F 1 "+24V" H 10115 5473 50  0000 C CNN
+F 2 "" H 10100 5300 50  0001 C CNN
+F 3 "" H 10100 5300 50  0001 C CNN
+	1    10100 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 5400 10400 5400
+Wire Wire Line
+	9700 5700 9800 5700
+Wire Notes Line
+	9000 5000 9000 6200
+Wire Notes Line
+	9000 6200 11000 6200
+Wire Notes Line
+	11000 6200 11000 5000
+Wire Notes Line
+	11000 5000 9000 5000
+Text GLabel 9700 5700 0    50   Input ~ 0
+WaterHeatCtl
+$Comp
+L Transistor_FET:DMG3402L Q1
+U 1 1 5FA35828
+P 5800 5700
+F 0 "Q1" H 6004 5746 50  0000 L CNN
+F 1 "DMG3402L" H 6004 5655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6000 5625 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/DMG3402L.pdf" H 5800 5700 50  0001 L CNN
+	1    5800 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J5
+U 1 1 5FA3582E
+P 6400 5400
+F 0 "J5" H 6508 5581 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 6508 5490 50  0000 C CNN
+F 2 "" H 6400 5400 50  0001 C CNN
+F 3 "~" H 6400 5400 50  0001 C CNN
+	1    6400 5400
+	-1   0    0    1   
+$EndComp
+Text Notes 4800 5000 0    50   ~ 0
+Rain
+Wire Wire Line
+	5900 5500 5900 5400
+$Comp
+L power:GND #PWR0117
+U 1 1 5FA35836
+P 5900 5900
+F 0 "#PWR0117" H 5900 5650 50  0001 C CNN
+F 1 "GND" H 5905 5727 50  0000 C CNN
+F 2 "" H 5900 5900 50  0001 C CNN
+F 3 "" H 5900 5900 50  0001 C CNN
+	1    5900 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 5300 6200 5300
+$Comp
+L power:+24V #PWR0118
+U 1 1 5FA3583D
+P 5900 5300
+F 0 "#PWR0118" H 5900 5150 50  0001 C CNN
+F 1 "+24V" H 5915 5473 50  0000 C CNN
+F 2 "" H 5900 5300 50  0001 C CNN
+F 3 "" H 5900 5300 50  0001 C CNN
+	1    5900 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 5400 6200 5400
+Text GLabel 5500 5700 0    50   Input ~ 0
+RainCtl
+Wire Wire Line
+	5500 5700 5600 5700
+Wire Notes Line
+	4800 5000 4800 6200
+Wire Notes Line
+	4800 6200 6800 6200
+Wire Notes Line
+	6800 6200 6800 5000
+Wire Notes Line
+	6800 5000 4800 5000
+$Comp
+L power:GND #PWR0119
+U 1 1 5FA3A2BD
+P 6100 1400
+F 0 "#PWR0119" H 6100 1150 50  0001 C CNN
+F 1 "GND" H 6105 1227 50  0000 C CNN
+F 2 "" H 6100 1400 50  0001 C CNN
+F 3 "" H 6100 1400 50  0001 C CNN
+	1    6100 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0120
+U 1 1 5FA3A89B
+P 2800 1400
+F 0 "#PWR0120" H 2800 1150 50  0001 C CNN
+F 1 "GND" H 2805 1227 50  0000 C CNN
+F 2 "" H 2800 1400 50  0001 C CNN
+F 3 "" H 2800 1400 50  0001 C CNN
+	1    2800 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1400 2800 1400
+Wire Wire Line
+	5500 1400 6100 1400
+Wire Notes Line
+	5000 6500 5000 7600
+Wire Notes Line
+	5000 7600 6500 7600
+Wire Notes Line
+	6500 7600 6500 6500
+Wire Notes Line
+	6500 6500 5000 6500
+Text Notes 5000 6500 0    50   ~ 0
+JTAG
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J4
+U 1 1 5F9FD638
+P 5700 7100
+F 0 "J4" H 5750 7517 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 5750 7426 50  0000 C CNN
+F 2 "" H 5700 7100 50  0001 C CNN
+F 3 "~" H 5700 7100 50  0001 C CNN
+	1    5700 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 5FA00C42
+P 5200 7400
+F 0 "#PWR0122" H 5200 7150 50  0001 C CNN
+F 1 "GND" H 5205 7227 50  0000 C CNN
+F 2 "" H 5200 7400 50  0001 C CNN
+F 3 "" H 5200 7400 50  0001 C CNN
+	1    5200 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 7000 5200 7000
+Wire Wire Line
+	5200 7000 5200 7100
+Wire Wire Line
+	5500 7100 5200 7100
+Connection ~ 5200 7100
+Wire Wire Line
+	5200 7100 5200 7300
+Wire Wire Line
+	5500 7300 5200 7300
+Connection ~ 5200 7300
+Text GLabel 6200 7200 2    50   Input ~ 0
+TDI
+Text GLabel 6200 7100 2    50   Input ~ 0
+TDO
+Text GLabel 6200 7000 2    50   Input ~ 0
+TCK
+Text GLabel 6200 6900 2    50   Input ~ 0
+TMS
+Wire Wire Line
+	6000 6900 6200 6900
+Wire Wire Line
+	6000 7000 6200 7000
+Wire Wire Line
+	6000 7100 6200 7100
+Wire Wire Line
+	6000 7200 6200 7200
+Wire Wire Line
+	5200 7400 5200 7300
+Text GLabel 5700 1700 2    50   Input ~ 0
+TMS
+Text GLabel 5700 1600 2    50   Input ~ 0
+TDI
+Text GLabel 5700 1500 2    50   Input ~ 0
+TCK
+Text GLabel 3200 1500 0    50   Input ~ 0
+TDO
+Wire Wire Line
+	5500 1500 5700 1500
+Wire Wire Line
+	5500 1600 5700 1600
+Wire Wire Line
+	5500 1700 5700 1700
+Wire Wire Line
+	3300 1500 3200 1500
+Text GLabel 5700 1800 2    50   Input ~ 0
+WaterHeatCtl
+Text GLabel 5700 1900 2    50   Input ~ 0
+AirHeatCtl
+Text GLabel 5700 2000 2    50   Input ~ 0
+VentilationCtl
+Text GLabel 5700 2100 2    50   Input ~ 0
+IrrigationCtl
+Text GLabel 5700 2200 2    50   Input ~ 0
+AerationCtl
+Text GLabel 5700 2300 2    50   Input ~ 0
+LightCtl
+Text GLabel 5700 2400 2    50   Input ~ 0
+RainCtl
+Text GLabel 5700 2500 2    50   Input ~ 0
+IRCtl
+Text GLabel 5700 2600 2    50   Input ~ 0
+WaterHeatCtl
+Text GLabel 3200 2600 0    50   Input ~ 0
+SCL
+Text GLabel 3200 2300 0    50   Input ~ 0
+SDA
+Wire Wire Line
+	3200 2300 3300 2300
+Wire Wire Line
+	3200 2600 3300 2600
+Wire Wire Line
+	5500 1800 5700 1800
+Wire Wire Line
+	5500 1900 5700 1900
+Wire Wire Line
+	5500 2000 5700 2000
+Wire Wire Line
+	5500 2100 5700 2100
+Wire Wire Line
+	5500 2200 5700 2200
+Wire Wire Line
+	5500 2300 5700 2300
+Wire Wire Line
+	5500 2400 5700 2400
+Wire Wire Line
+	5500 2500 5700 2500
+Wire Wire Line
+	5500 2600 5700 2600
+Text GLabel 1750 3000 2    50   Input ~ 0
+SCL
+Text GLabel 1750 2800 2    50   Input ~ 0
+SDA
+$Comp
+L power:GND #PWR0123
+U 1 1 5FA34D09
+P 2050 2900
+F 0 "#PWR0123" H 2050 2650 50  0001 C CNN
+F 1 "GND" H 2055 2727 50  0000 C CNN
+F 2 "" H 2050 2900 50  0001 C CNN
+F 3 "" H 2050 2900 50  0001 C CNN
+	1    2050 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2800 1650 2800
+Wire Wire Line
+	1650 3000 1750 3000
+$Comp
+L power:+3V3 #PWR0124
+U 1 1 5FA3ED41
+P 2050 2700
+F 0 "#PWR0124" H 2050 2550 50  0001 C CNN
+F 1 "+3V3" H 2065 2873 50  0000 C CNN
+F 2 "" H 2050 2700 50  0001 C CNN
+F 3 "" H 2050 2700 50  0001 C CNN
+	1    2050 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0125
+U 1 1 5FA53013
+P 1750 1900
+F 0 "#PWR0125" H 1750 1650 50  0001 C CNN
+F 1 "GND" H 1755 1727 50  0000 C CNN
+F 2 "" H 1750 1900 50  0001 C CNN
+F 3 "" H 1750 1900 50  0001 C CNN
+	1    1750 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0126
+U 1 1 5FA532DD
+P 1800 1100
+F 0 "#PWR0126" H 1800 950 50  0001 C CNN
+F 1 "+3V3" H 1815 1273 50  0000 C CNN
+F 2 "" H 1800 1100 50  0001 C CNN
+F 3 "" H 1800 1100 50  0001 C CNN
+	1    1800 1100
+	1    0    0    -1  
+$EndComp
+Text GLabel 1950 1400 2    50   Input ~ 0
+WaterTemp
+Wire Wire Line
+	1800 1300 1800 1100
+Wire Wire Line
+	1500 1300 1800 1300
+$Comp
+L Device:R R1
+U 1 1 5FA635F9
+P 1750 1650
+F 0 "R1" H 1820 1696 50  0000 L CNN
+F 1 "R" H 1820 1605 50  0000 L CNN
+F 2 "" V 1680 1650 50  0001 C CNN
+F 3 "~" H 1750 1650 50  0001 C CNN
+	1    1750 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 1500 1750 1400
+Wire Wire Line
+	1750 1400 1500 1400
+Wire Wire Line
+	1750 1900 1750 1800
+Wire Wire Line
+	1950 1400 1750 1400
+Connection ~ 1750 1400
+Wire Notes Line
+	950  850  950  2150
+Wire Notes Line
+	950  2150 2450 2150
+Wire Notes Line
+	2450 2150 2450 850 
+Wire Notes Line
+	2450 850  950  850 
+Wire Notes Line
+	950  2350 950  3150
+Wire Notes Line
+	950  3150 2450 3150
+Wire Notes Line
+	2450 3150 2450 2350
+Wire Notes Line
+	2450 2350 950  2350
+Text GLabel 3200 1700 0    50   Input ~ 0
+WaterTemp
+Wire Wire Line
+	3200 1700 3300 1700
+$Comp
+L power:+24V #PWR0127
+U 1 1 5FAAD307
+P 2650 3700
+F 0 "#PWR0127" H 2650 3550 50  0001 C CNN
+F 1 "+24V" H 2665 3873 50  0000 C CNN
+F 2 "" H 2650 3700 50  0001 C CNN
+F 3 "" H 2650 3700 50  0001 C CNN
+	1    2650 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0128
+U 1 1 5FAAD7DE
+P 2050 3900
+F 0 "#PWR0128" H 2050 3650 50  0001 C CNN
+F 1 "GND" H 2055 3727 50  0000 C CNN
+F 2 "" H 2050 3900 50  0001 C CNN
+F 3 "" H 2050 3900 50  0001 C CNN
+	1    2050 3900
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	950  3400 950  4150
+Wire Notes Line
+	950  4150 2800 4150
+Wire Notes Line
+	2800 4150 2800 3400
+Wire Notes Line
+	2800 3400 950  3400
+Text Notes 950  3400 0    50   ~ 0
+Input power
+$Comp
+L power:+3V3 #PWR0129
+U 1 1 5FA0A9C6
+P 2800 1300
+F 0 "#PWR0129" H 2800 1150 50  0001 C CNN
+F 1 "+3V3" H 2815 1473 50  0000 C CNN
+F 2 "" H 2800 1300 50  0001 C CNN
+F 3 "" H 2800 1300 50  0001 C CNN
+	1    2800 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1300 3300 1300
+$Comp
+L MySymbols:D24V5F3 U1
+U 1 1 5FA12CA3
+P 1650 4950
+F 0 "U1" V 2100 5000 50  0000 R CNN
+F 1 "D24V5F3" V 1200 5100 50  0000 R CNN
+F 2 "" H 1550 5050 50  0001 C CNN
+F 3 "" H 1550 5050 50  0001 C CNN
+	1    1650 4950
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+24V #PWR0130
+U 1 1 5FA138AA
+P 1100 4650
+F 0 "#PWR0130" H 1100 4500 50  0001 C CNN
+F 1 "+24V" H 1115 4823 50  0000 C CNN
+F 2 "" H 1100 4650 50  0001 C CNN
+F 3 "" H 1100 4650 50  0001 C CNN
+	1    1100 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0131
+U 1 1 5FA13FDC
+P 2350 4950
+F 0 "#PWR0131" H 2350 4800 50  0001 C CNN
+F 1 "+3V3" H 2365 5123 50  0000 C CNN
+F 2 "" H 2350 4950 50  0001 C CNN
+F 3 "" H 2350 4950 50  0001 C CNN
+	1    2350 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0132
+U 1 1 5FA14BCA
+P 1100 5200
+F 0 "#PWR0132" H 1100 4950 50  0001 C CNN
+F 1 "GND" H 1105 5027 50  0000 C CNN
+F 2 "" H 1100 5200 50  0001 C CNN
+F 3 "" H 1100 5200 50  0001 C CNN
+	1    1100 5200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1250 4950
+Wire Wire Line
+	1750 3900 1900 3900
+$Comp
+L Connector:Barrel_Jack J3
+U 1 1 5F9F06B4
+P 1450 3800
+F 0 "J3" H 1507 4125 50  0000 C CNN
+F 1 "Barrel_Jack" H 1507 4034 50  0000 C CNN
+F 2 "" H 1500 3760 50  0001 C CNN
+F 3 "~" H 1500 3760 50  0001 C CNN
+	1    1450 3800
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	950  4350 950  5450
+Wire Notes Line
+	950  5450 2450 5450
+Wire Notes Line
+	2450 5450 2450 4350
+Wire Notes Line
+	2450 4350 950  4350
+Text Notes 950  4350 0    50   ~ 0
+3.3V Switcher
+Wire Wire Line
+	1100 4650 1100 4750
+Wire Wire Line
+	1100 4750 1250 4750
+Wire Wire Line
+	1250 5150 1100 5150
+Wire Wire Line
+	1100 5150 1100 5200
+Wire Wire Line
+	1650 2700 2050 2700
+Wire Wire Line
+	1650 2900 2050 2900
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5FA47126
+P 1900 3900
+F 0 "#FLG0103" H 1900 3975 50  0001 C CNN
+F 1 "PWR_FLAG" H 2150 3950 50  0000 C CNN
+F 2 "" H 1900 3900 50  0001 C CNN
+F 3 "~" H 1900 3900 50  0001 C CNN
+	1    1900 3900
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 3900
+Wire Wire Line
+	1900 3900 2050 3900
+$Comp
+L power:+3V3 #PWR0121
+U 1 1 5FA47359
+P 5200 6800
+F 0 "#PWR0121" H 5200 6650 50  0001 C CNN
+F 1 "+3V3" H 5215 6973 50  0000 C CNN
+F 2 "" H 5200 6800 50  0001 C CNN
+F 3 "" H 5200 6800 50  0001 C CNN
+	1    5200 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 6900 5200 6800
+Wire Wire Line
+	5200 6900 5500 6900
+Wire Wire Line
+	2050 4950 2350 4950
+Wire Wire Line
+	1750 3700 1800 3700
+NoConn ~ 5500 1300
+NoConn ~ 5500 2700
+NoConn ~ 3300 1600
+NoConn ~ 3300 1800
+NoConn ~ 3300 1900
+NoConn ~ 3300 2000
+NoConn ~ 3300 2100
+NoConn ~ 3300 2200
+NoConn ~ 3300 2400
+NoConn ~ 3300 2500
+NoConn ~ 3300 2700
+NoConn ~ 5500 7200
+NoConn ~ 6000 7300
+$Comp
+L Device:Fuse F?
+U 1 1 5FAEDA44
+P 1950 3700
+F 0 "F?" V 1753 3700 50  0000 C CNN
+F 1 "Fuse" V 1844 3700 50  0000 C CNN
+F 2 "" V 1880 3700 50  0001 C CNN
+F 3 "~" H 1950 3700 50  0001 C CNN
+	1    1950 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2100 3700 2200 3700
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5FB07480
+P 2200 3650
+F 0 "#FLG?" H 2200 3725 50  0001 C CNN
+F 1 "PWR_FLAG" H 2450 3700 50  0000 C CNN
+F 2 "" H 2200 3650 50  0001 C CNN
+F 3 "~" H 2200 3650 50  0001 C CNN
+	1    2200 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3650 2200 3700
+Connection ~ 2200 3700
+Wire Wire Line
+	2200 3700 2650 3700
+$EndSCHEMATC
